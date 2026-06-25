@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专注于足彩竞猜的深度内容 · 新访客与老朋友</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f7f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2e2a27;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            padding: 3.5rem 2rem;
+            border-radius: 0;
+        }
+
+        /* hero 区域 ———— 轻杂志封面感 */
+        .hero {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #ece8e3;
+            padding-bottom: 2rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #8f8a84;
+            border: 1px solid #ddd8d2;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            color: #1f1c19;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(to right, #b7a38b, #8a7b68);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #5f5951;
+            max-width: 580px;
+        }
+
+        /* 正文区域 */
+        .content-section {
+            margin: 2.8rem 0;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: #2e2a27;
+            margin-bottom: 1rem;
+            border-left: 3px solid #d6cdc0;
+            padding-left: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            color: #3f3b36;
+            margin-bottom: 1.2rem;
+        }
+
+        .content-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .inset-note {
+            background-color: #f5f2ee;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 2px;
+            font-size: 0.95rem;
+            color: #3f3b36;
+            border-left: 2px solid #c8bbb0;
+        }
+
+        .inset-note a {
+            color: #5f4f3e;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: all 0.15s;
+        }
+
+        .inset-note a:hover {
+            color: #1f1c19;
+            text-decoration-thickness: 2px;
+        }
+
+        .quiet-link {
+            color: #5f4f3e;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 0.5px;
+            transition: all 0.1s;
+        }
+
+        .quiet-link:hover {
+            color: #1f1c19;
+            text-decoration-thickness: 1.5px;
+        }
+
+        /* 小卡片 / 提示块 */
+        .faq-mini {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+            background: #fcfaf8;
+            border: 1px solid #ebe5df;
+            padding: 1.3rem 1.2rem;
+        }
+
+        .faq-item .q {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #5f4f3e;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.95rem;
+            color: #3f3b36;
+            line-height: 1.5;
+        }
+
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e9e2db;
+            font-size: 0.9rem;
+            color: #6f675f;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .footer-note a {
+            color: #4f4439;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+        }
+
+        .footer-note a:hover {
+            color: #1f1c19;
+        }
+
+        .footer-note .visit-hint {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .content-section h2 {
+                font-size: 1.2rem;
+            }
+            .inset-note {
+                padding: 1.2rem 1rem;
+            }
+            .faq-item {
+                flex: 1 1 100%;
+            }
+            .footer-note {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 杂志横幅 -->
+    <div class="hero">
+        <div class="hero-tag">杂志 · 视野</div>
+        <h1>再次翻开，关于<em>足彩竞猜</em>的日常与远见</h1>
+        <p>每一次返回都像翻开一本熟悉的杂志——内容在更新，但沉稳的叙事从未离开。</p>
+    </div>
+
+    <!-- 第一段：再次访问的质感 -->
+    <div class="content-section">
+        <h2>收藏夹里的老朋友</h2>
+        <p>当你再次打开这个页面，或许是因为某个联赛的周末，或者只是习惯性地想看看近期围绕 <a href="https://play-sportbet.com" class="quiet-link">足彩竞猜</a> 又多了哪些冷静的讨论。我们不追逐喧闹的预测，更在意长期的脉络——从赛前数据梳理到赛后的复盘逻辑，慢慢积累起一种可供参考的阅读体验。</p>
+        <p>收藏，有时是对一个信息角落的信任。这里没有弹窗和紧迫的倒计时，只有当你准备好的时候，那些关于球队近况、战术变动、盘面解读的内容才会自然地出现在眼前。如同书架上那本常翻常新的期刊，每一次打开都带着熟悉又新鲜的空气。</p>
+    </div>
+
+    <!-- 第二段：背景与节奏感 -->
+    <div class="content-section">
+        <h2>持续关注的背后</h2>
+        <p>很多人误以为足彩竞猜只关乎临场一瞥，实际上真正值得留意的往往是那些安静的细节：连续几轮的主客场表现、教练赛前发言的微妙语气、甚至伤病名单里一个不起眼的恢复日期。我们把这些碎片聚拢、串联，不是为了给出唯一的答案，而是提供一种更完整的观察方式。</p>
+        <p>持续关注，意味着你慢慢会形成自己的判断坐标。这个网站更像是一本私人剪报——记录着不同阶段的思路与调整。如果你已经在这里停留过几次，应该会发现内容节奏从来不是急躁的，我们更希望每一次阅读都能留下一点可回味的余地。</p>
+        <div class="inset-note">
+            <strong>小记</strong> · 许多朋友把这里当作赛前的一杯安静的时间。没有喧嚷的推送，只有当你点进 <a href="https://play-sportbet.com">足彩竞猜</a> 时，那些经过梳理的信息才会铺展开来。
+        </div>
+    </div>
+
+    <!-- 第三段：场景与 FAQ 摘要 -->
+    <div class="content-section">
+        <h2>一些常被问起的</h2>
+        <p>不管是新朋友还是老读者，偶尔都会有一些相似的疑问。我们整理了几个最常被提起的念头，或许你也曾有过：</p>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="q">这里的内容更新频次？</div>
+                <div class="a">大致保持每周 2–3 次深度内容，赛前与赛后各一篇，中间穿插一些数据视角的短文。不会刷屏，适合细读。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">需要注册或订阅吗？</div>
+                <div class="a">完全不需要。整个网站对所有人开放，你可以随时将页面添加到书签，下次直接打开即可。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">和那些即时比分站有什么不同？</div>
+                <div class="a">这里不追求秒级刷新，更看重赛前准备与赛后沉淀。如果你也喜欢在安静中消化信息，大概会适应这种节奏。</div>
+            </div>
+        </div>
+        <p style="margin-top: 0.8rem;">当然，如果你有其他好奇的，也欢迎在阅读的过程中慢慢找到自己的答案。</p>
+    </div>
+
+    <!-- 页尾：再次访问的提示 -->
+    <div class="footer-note">
+        <span>无论第几次回来，都希望这里依然有你看重的内容。</span>
+        <span class="visit-hint">你可以随时通过书签回到 <a href="https://play-sportbet.com">足彩竞猜</a>，或推荐给愿意慢读的朋友。</span>
+    </div>
+</div>
+</body>
+</html>
